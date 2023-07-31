@@ -20,12 +20,10 @@ jobs:
       - name: Install and Build
         run: |
           npm install
-          npm install -g @quasar/cli
-          quasar build
-          npx @quasar/cli serve dist/spa
+          npm run build
       # 步驟三：部署
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist
+          folder: dist/spa
