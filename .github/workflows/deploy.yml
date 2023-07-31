@@ -20,7 +20,8 @@ jobs:
       - name: Install and Build
         run: |
           npm install
-          npm run build
+          npm install -g @quasar/cli
+          quasar build
       # 步驟三：部署
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
